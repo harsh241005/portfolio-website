@@ -62,15 +62,8 @@
                 </div>
                 <div class="skills-container">
                     <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">scikit-learn</span>
-                        <span class="skill-tag">GCP</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">Streamlit</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">BigQuery</span>
+                    <div class="chart-container" style="position: relative; height:300px; width:100%; margin-top: 1rem;">
+                        <canvas id="skillsChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -164,7 +157,9 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/3d-bg.js"></script>
+    <script src="js/skills-chart.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
