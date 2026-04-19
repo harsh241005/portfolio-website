@@ -57,4 +57,33 @@ document.addEventListener("DOMContentLoaded", () => {
             elem.style.transform = `translate(0px, 0px) scale(1)`;
         });
     });
+
+    // Custom Magnetic Cursor
+    const cursor = document.querySelector('.custom-cursor');
+    if (cursor && window.innerWidth > 768) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let cursorX = mouseX;
+        let cursorY = mouseY;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        const animateCursor = () => {
+            cursorX += (mouseX - cursorX) * 0.2;
+            cursorY += (mouseY - cursorY) * 0.2;
+            cursor.style.left = `${cursorX}px`;
+            cursor.style.top = `${cursorY}px`;
+            requestAnimationFrame(animateCursor);
+        };
+        animateCursor();
+
+        const clickables = document.querySelectorAll('a, button, .project-card, .btn');
+        clickables.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+    }
 });

@@ -300,10 +300,33 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    mix-blend-mode: screen;
+}
+.custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(59, 130, 246, 0.2);
+    border-color: var(--accent-2);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links { display: none; } /* Simplified for mobile, could add hamburger */
     .about-content, .contact-container { grid-template-columns: 1fr; }
     .hero-content { text-align: center; margin: 0 auto; }
     .cta-buttons { justify-content: center; }
+    .custom-cursor { display: none; } /* Hide custom cursor on mobile */
 }
