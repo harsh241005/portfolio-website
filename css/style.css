@@ -221,11 +221,35 @@ h1, h2, h3 { font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background: var(--glass-bg);
+}
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 0) var(--mouse-y, 0), 
+        rgba(139, 92, 246, 0.15),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 0;
+}
+.project-card:hover::before {
+    opacity: 1;
 }
 .project-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(59, 130, 246, 0.4);
+    border-color: rgba(139, 92, 246, 0.4);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.card-content {
+    position: relative;
+    z-index: 1;
 }
 .card-content h3 { font-size: 1.4rem; margin-bottom: 1rem; }
 .card-content p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
