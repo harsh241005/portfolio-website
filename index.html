@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Palyekar | Portfolio</title>
+    <meta name="description" content="Portfolio of Harsh Palyekar, focusing on Data Science, Machine Learning, and Business Analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <header class="floating-header">
+        <nav class="navbar floating-nav">
+            <div class="logo">HP<span class="gradient-text">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="header-action">
+                <a href="#contact" class="btn primary-btn small-btn">Let's Talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="hero" class="hero section hidden">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h2 class="greeting">Hello, I'm</h2>
+                    <h1 class="name">Harsh Palyekar</h1>
+                    <h3 class="role"><span class="gradient-text">Data Science</span> &middot; Machine Learning &middot; Business Analytics</h3>
+                    <p class="summary">
+                        Data Science graduate building end-to-end ML systems — from NLP-driven prediction to cloud-deployed analytics on GCP. Translating data into actionable decisions.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn">View Projects</a>
+                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Replace the src below with your actual image path -->
+                    <img src="images/myimage.jpg" alt="Harsh Palyekar" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Harsh+Palyekar&background=3b82f6&color=fff&size=400'">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section hidden">
+            <div class="section-header">
+                <h2>About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-content glass-panel">
+                <div class="about-text">
+                    <p>I am a Data Science student at Goa University building end-to-end ML systems. I have a strong foundation in statistics, econometrics, and business strategy.</p>
+                    <p>My expertise lies in Regression, Classification, K-Means, ARIMA, Random Forest, XGBoost, and NLP.</p>
+                </div>
+                <div class="skills-container">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">BigQuery</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section hidden">
+            <div class="section-header">
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="project-grid">
+                
+                <div class="project-card glass-panel" onclick="window.open('https://github.com/harsh241005/InsightX', '_blank')" style="cursor: pointer;" title="View on GitHub">
+                    <div class="card-content">
+                        <h3>InsightX — Analytics</h3>
+                        <p>End-to-end analytics platform on GCP processing 100K+ Brazilian e-commerce transactions using BigQuery ML, ARIMIA+ forecasting & Streamlit.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>GCP</span><span>BigQuery ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-panel" onclick="window.open('https://github.com/harsh241005/project-health-monitor', '_blank')" style="cursor: pointer;" title="View on GitHub">
+                    <div class="card-content">
+                        <h3>Health Monitor</h3>
+                        <p>Analyzed 46,000+ Apache Hadoop emails using XGBoost and VADER to predict software ticket stalling from developer communication patterns.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>XGBoost</span><span>NLP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-panel" onclick="window.open('https://github.com/harsh241005/telecom-churn-profit-evaluation', '_blank')" style="cursor: pointer;" title="View on GitHub">
+                    <div class="card-content">
+                        <h3>Telecom Churn</h3>
+                        <p>Evaluated profit implications of customer churn in the telecommunications industry using predictive modeling and data analysis.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>Data Analysis</span><span>ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-panel" onclick="window.open('https://github.com/harsh241005', '_blank')" style="cursor: pointer;" title="View on GitHub">
+                    <div class="card-content">
+                        <h3>Calometer Predictor</h3>
+                        <p>Developed a web app predicting calories burned from exercise using Random Forest, percentile benchmarking, and similar comparisons.</p>
+                        <div class="tech-stack">
+                            <span>Streamlit</span><span>scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section hidden">
+            <div class="section-header">
+                <h2>Get in <span class="gradient-text">Touch</span></h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info glass-panel">
+                    <h3>Contact Information</h3>
+                    <p>Interested in working together or just want to say hi? Feel free to drop a message!</p>
+                    <ul class="social-links">
+                        <li><strong>Email:</strong> palyekarharsh2410@gmail.com</li>
+                        <li><strong>Based in:</strong> Mapusa, Goa</li>
+                    </ul>
+                </div>
+                <form class="contact-form glass-panel" onsubmit="event.preventDefault(); alert('Message sent!');">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required placeholder="Your Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Harsh Palyekar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/3d-bg.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
