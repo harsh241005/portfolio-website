@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsh Palyekar | Portfolio</title>
-    <meta name="description" content="Portfolio of Harsh Palyekar, focusing on Data Science, Machine Learning, and Business Analytics.">
+    <meta name="description" content="Portfolio of Harsh Palyekar — Data Scientist, Data Analyst, Business Analytics.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="custom-cursor"></div>
     <canvas id="bg-canvas"></canvas>
+
     <header class="floating-header">
         <nav class="navbar floating-nav">
             <div class="logo">HP<span class="gradient-text">.</span></div>
             <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">WORK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
+            <div class="nav-socials" aria-label="Social links">
+                <a href="https://github.com/harsh241005" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://in.linkedin.com/in/harsh-palyekar-790209295" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:palyekarharsh2410@gmail.com">Email</a>
+            </div>
             <div class="header-action">
                 <a href="#contact" class="btn primary-btn small-btn">Let's Talk</a>
             </div>
@@ -29,108 +34,271 @@
     </header>
 
     <main>
-        <!-- Home / Hero Section -->
+        <!-- HERO -->
         <section id="hero" class="hero section hidden">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h2 class="greeting">Hello, I'm</h2>
-                    <h1 class="name">Harsh Palyekar</h1>
-                    <h3 class="role"><span class="gradient-text">Data Science</span> &middot; Machine Learning &middot; Business Analytics</h3>
-                    <p class="summary">
-                        Data Science graduate building end-to-end ML systems — from NLP-driven prediction to cloud-deployed analytics on GCP. Translating data into actionable decisions.
-                    </p>
+            <div class="hero-split">
+                <div class="hero-left">
+                    <p class="greeting">Hello! I'm</p>
+                    <h1 class="name-stack">
+                        <span class="name-word">HARSH</span>
+                        <span class="name-word">PALYEKAR</span>
+                    </h1>
+                    <p class="hero-summary">Data Science graduate passionate about turning complex data into intelligent solutions through analytics, machine learning, and cloud technologies.</p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn primary-btn">View Projects</a>
                         <a href="#contact" class="btn secondary-btn">Contact Me</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <!-- Replace the src below with your actual image path -->
-                    <img src="images/myimage.png" alt="Harsh Palyekar" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Harsh+Palyekar&background=3b82f6&color=fff&size=400'">
+
+                <div class="hero-center">
+                    <div class="avatar-stage">
+                        <div class="avatar-glow"></div>
+                        <img src="images/myimage.png" alt="Harsh Palyekar" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Harsh+Palyekar&background=3b82f6&color=fff&size=400'">
+                        <div class="avatar-tag tag-top">&#9733; Data Scientist</div>
+                        <div class="avatar-tag tag-left">&#9679; Data Analyst</div>
+                        <div class="avatar-tag tag-bottom">&#9889; Business Analyst</div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <p class="role-preline">A Passionate</p>
+                    <h2 class="role-headline">
+                        <span class="role-line">DATA</span>
+                        <span class="role-line role-line--accent">ANALYST</span>
+                    </h2>
+                    <p class="role-postline">&amp; BI Enthusiast</p>
+                    <a href="resume/Harsh_Palyekar_Resume_july.pdf" target="_blank" rel="noopener" class="btn primary-btn resume-btn">Resume</a>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- ABOUT -->
         <section id="about" class="about section hidden">
             <div class="section-header">
                 <h2>About <span class="gradient-text">Me</span></h2>
             </div>
             <div class="about-content glass-panel">
                 <div class="about-text">
-                    <p>I am a Data Science student at Goa University building end-to-end ML systems. I have a strong foundation in statistics, econometrics, and business strategy.</p>
-                    <p>My expertise lies in Regression, Classification, K-Means, ARIMA, Random Forest, XGBoost, and NLP.</p>
+                    <p>I am a Data Science graduate from Goa University with a passion for transforming data into actionable business insights. My interests lie at the intersection of data analytics, business intelligence, and machine learning, where I enjoy solving real-world problems using data-driven approaches.</p>
+                    <p>I have hands-on experience with SQL, Python, Power BI, Tableau, Excel, and Google Cloud Platform, building end-to-end analytics solutions ranging from data cleaning and visualization to predictive modeling and dashboard development. My technical foundation includes statistical analysis, machine learning, forecasting, and natural language processing, complemented by a strong understanding of business strategy and decision-making.</p>
+                    <p>I believe data is most valuable when it drives meaningful decisions. Whether it's uncovering trends, building interactive dashboards, or developing predictive models, my goal is to transform complex data into clear, actionable insights that create measurable business impact.</p>
+                    <div class="about-stats">
+                        <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Projects Built</span></div>
+                        <div class="stat"><span class="stat-num">100K+</span><span class="stat-label">Rows Analyzed</span></div>
+                        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Dashboards &amp; Reports</span></div>
+                    </div>
                 </div>
                 <div class="skills-container">
                     <h3>Technical Skills</h3>
-                    <div class="chart-container" style="position: relative; height:300px; width:100%; margin-top: 1rem;">
-                        <canvas id="skillsChart"></canvas>
+                    <div class="skills-grid-modern">
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">Languages &amp; Querying</h4>
+                            <div class="skill-pills">
+                                <span class="skill-pill"><span class="pill-dot" data-color="#e38c00"></span>SQL</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#3776ab"></span>Python</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#276dc3"></span>R</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">Data Analytics &amp; Business Intelligence</h4>
+                            <div class="skill-pills">
+                                <span class="skill-pill"><span class="pill-dot" data-color="#f2c811"></span>Power BI</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#e37400"></span>Tableau</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#217346"></span>Excel</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#11557c"></span>Pandas</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#013243"></span>NumPy</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#ff4b4b"></span>Streamlit</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">Machine Learning &amp; Statistics</h4>
+                            <div class="skill-pills">
+                                <span class="skill-pill"><span class="pill-dot" data-color="#ee4c2c"></span>Scikit-learn</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#3b82f6"></span>Logistic Regression</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#22d3ee"></span>Random Forest</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#ff6f00"></span>XGBoost</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#8b5cf6"></span>Time Series Forecasting (ARIMA)</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#f59e0b"></span>Hypothesis Testing</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">Databases &amp; Cloud</h4>
+                            <div class="skill-pills">
+                                <span class="skill-pill"><span class="pill-dot" data-color="#669df6"></span>BigQuery</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#4285f4"></span>Google Cloud Platform (GCP)</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 class="skill-category-title">Tools</h4>
+                            <div class="skill-pills">
+                                <span class="skill-pill"><span class="pill-dot" data-color="#f5f5f7"></span>GitHub</span>
+                                <span class="skill-pill"><span class="pill-dot" data-color="#f37626"></span>Jupyter Notebook</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Projects Section -->
+        <!-- WHAT I DO -->
+        <section id="services" class="services section hidden">
+            <div class="section-header">
+                <h2>WHAT <span class="gradient-text">I DO</span></h2>
+            </div>
+            <div class="services-layout">
+                <div class="services-stage">
+                    <div class="stage-ring"></div>
+                    <div class="stage-monitor">
+                        <div class="monitor-bar"></div>
+                        <div class="monitor-screen">
+                            <div class="dashboard-kpis">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="dashboard-bars">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="code-chart"></div>
+                        </div>
+                    </div>
+                    <div class="stage-desk"></div>
+                    <div class="stage-orb"></div>
+                </div>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="service-head">
+                            <h3>DATA ANALYTICS</h3>
+                            <span class="service-arrow">&#8599;</span>
+                        </div>
+                        <p>Clean, analyze, and interpret complex datasets to uncover patterns, optimize processes, and support strategic business decisions.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-head">
+                            <h3>BUSINESS INTELLIGENCE</h3>
+                            <span class="service-arrow">&#8599;</span>
+                        </div>
+                        <p>Design interactive dashboards and automated reporting solutions with Power BI, Tableau, and SQL that transform data into clear business insights.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-head">
+                            <h3>PREDICTIVE ANALYTICS</h3>
+                            <span class="service-arrow">&#8599;</span>
+                        </div>
+                        <p>Build and evaluate machine learning models for forecasting, classification, customer segmentation, and business optimization using Python and modern ML techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PROJECTS -->
         <section id="projects" class="projects section hidden">
             <div class="section-header">
-                <h2>Featured <span class="gradient-text">Projects</span></h2>
+                <h2>FEATURED <span class="gradient-text">PROJECTS</span></h2>
             </div>
-            <div class="project-grid">
-                
-                <div class="project-card glass-panel" onclick="window.open('https://github.com/harsh241005/InsightX', '_blank')" style="cursor: pointer;" title="View on GitHub">
-                    <div class="card-content">
-                        <h3>InsightX — Analytics</h3>
-                        <p>End-to-end analytics platform on GCP processing 100K+ Brazilian e-commerce transactions using BigQuery ML, ARIMIA+ forecasting & Streamlit.</p>
-                        <div class="tech-stack">
-                            <span>Python</span><span>GCP</span><span>BigQuery ML</span>
+            <div class="project-showcase">
+                <article class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <div class="project-content">
+                        <div class="card-header">
+                            <div class="card-icon">&#9733;</div>
+                            <span class="card-badge">Featured</span>
                         </div>
+                        <h3>InsightX &ndash; E-Commerce Analytics Platform</h3>
+                        <p>Cloud-deployed e-commerce analytics platform for forecasting, segmentation, and interactive business intelligence.</p>
+                        <ul class="project-highlights">
+                            <li>Built an end-to-end ETL pipeline processing 100K+ e-commerce transactions.</li>
+                            <li>Developed BigQuery ML forecasting and customer segmentation models.</li>
+                            <li>Built a multi-page Streamlit analytics dashboard.</li>
+                            <li>Deployed using Docker, Cloud Build, and Cloud Run on Google Cloud.</li>
+                        </ul>
+                        <div class="tech-stack"><span>Python</span><span>BigQuery ML</span><span>Streamlit</span><span>GCP</span><span>Docker</span></div>
+                        <div class="project-actions"><a href="https://github.com/harsh241005/InsightX" target="_blank" rel="noopener" class="btn primary-btn">GitHub</a></div>
                     </div>
-                </div>
+                    <a href="https://github.com/harsh241005/InsightX" target="_blank" rel="noopener" class="project-image" aria-label="View InsightX repository"><img src="images/insightx.png" alt="InsightX e-commerce analytics dashboard screenshot" loading="lazy"></a>
+                </article>
 
-                <div class="project-card glass-panel" onclick="window.open('https://github.com/harsh241005/project-health-monitor', '_blank')" style="cursor: pointer;" title="View on GitHub">
-                    <div class="card-content">
-                        <h3>Health Monitor</h3>
-                        <p>Analyzed 46,000+ Apache Hadoop emails using XGBoost and VADER to predict software ticket stalling from developer communication patterns.</p>
-                        <div class="tech-stack">
-                            <span>Python</span><span>XGBoost</span><span>NLP</span>
-                        </div>
+                <article class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <div class="project-content">
+                        <div class="card-header"><div class="card-icon">&#9889;</div><span class="card-badge">NLP</span></div>
+                        <h3>Socio-Technical Health Monitor</h3>
+                        <p>NLP-driven project health monitor for identifying risk signals in software communication and ticket data.</p>
+                        <ul class="project-highlights">
+                            <li>Built a seven-stage NLP pipeline for Apache Hadoop communication data.</li>
+                            <li>Processed over 112,000 email-ticket relationships.</li>
+                            <li>Compared Logistic Regression, Random Forest and XGBoost.</li>
+                            <li>Built a SHAP explainability dashboard.</li>
+                        </ul>
+                        <div class="tech-stack"><span>Python</span><span>NLP</span><span>XGBoost</span><span>SHAP</span></div>
+                        <div class="project-actions"><a href="https://github.com/harsh241005/Predicting-Ticket-Stalling-Using-Jira-And-Email-Sentiment-Analysis" target="_blank" rel="noopener" class="btn primary-btn">GitHub</a></div>
                     </div>
-                </div>
+                    <a href="https://github.com/harsh241005/Predicting-Ticket-Stalling-Using-Jira-And-Email-Sentiment-Analysis" target="_blank" rel="noopener" class="project-image" aria-label="View Socio-Technical Health Monitor repository"><img src="images/project-health.png" alt="Socio-Technical Health Monitor dashboard screenshot" loading="lazy"></a>
+                </article>
 
-                <div class="project-card glass-panel" onclick="window.open('https://github.com/harsh241005/telecom-churn-profit-evaluation', '_blank')" style="cursor: pointer;" title="View on GitHub">
-                    <div class="card-content">
-                        <h3>Telecom Churn</h3>
-                        <p>Evaluated profit implications of customer churn in the telecommunications industry using predictive modeling and data analysis.</p>
-                        <div class="tech-stack">
-                            <span>Python</span><span>Data Analysis</span><span>ML</span>
-                        </div>
+                <article class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <div class="project-content">
+                        <div class="card-header"><div class="card-icon">&#128202;</div><span class="card-badge">GCP</span></div>
+                        <h3>IPL Analytics Dashboard</h3>
+                        <p>Interactive dashboard for exploring IPL performance across teams, players, and seasons.</p>
+                        <ul class="project-highlights">
+                            <li>Built an end to end project on google cloud for IPL performance analysis.</li>
+                            <li>Included player, team, and season-level insights.</li>
+                            <li>Designed KPI cards, slicers and interactive visualizations.</li>
+                        </ul>
+                        <div class="tech-stack"><span>GCP</span><span>Data Analytics</span><span>Dashboards</span></div>
+                        <div class="project-actions"><a href="https://github.com/harsh241005/ipl-analytics" target="_blank" rel="noopener" class="btn primary-btn">GitHub</a></div>
                     </div>
-                </div>
+                    <a href="https://github.com/harsh241005/ipl-analytics" target="_blank" rel="noopener" class="project-image" aria-label="View IPL Analytics Dashboard repository"><img src="images/ipl-analysis.png" alt="IPL Analytics Dashboard screenshot" loading="lazy"></a>
+                </article>
 
-                <div class="project-card glass-panel" onclick="window.open('https://github.com/harsh241005', '_blank')" style="cursor: pointer;" title="View on GitHub">
-                    <div class="card-content">
-                        <h3>Calometer Predictor</h3>
-                        <p>Developed a web app predicting calories burned from exercise using Random Forest, percentile benchmarking, and similar comparisons.</p>
-                        <div class="tech-stack">
-                            <span>Streamlit</span><span>scikit-learn</span>
-                        </div>
+                <article class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <div class="project-content">
+                        <div class="card-header"><div class="card-icon">&#128200;</div><span class="card-badge">Analytics</span></div>
+                        <h3>Telecom Churn Profit Evaluation</h3>
+                        <p>Business-focused churn modeling project evaluating profit impact alongside model performance.</p>
+                        <ul class="project-highlights">
+                            <li>Compared multiple machine learning models.</li>
+                            <li>Evaluated business profit instead of only model accuracy.</li>
+                            <li>Demonstrated business-focused model selection.</li>
+                        </ul>
+                        <div class="tech-stack"><span>Python</span><span>Machine Learning</span><span>Profit Analysis</span></div>
+                        <div class="project-actions"><a href="https://github.com/harsh241005/telecom-churn-profit-evaluation" target="_blank" rel="noopener" class="btn primary-btn">GitHub</a></div>
                     </div>
-                </div>
+                    <a href="https://github.com/harsh241005/telecom-churn-profit-evaluation" target="_blank" rel="noopener" class="project-image" aria-label="View Telecom Churn Profit Evaluation repository"><img src="images/telecom-churn.png" alt="Telecom Churn Profit Evaluation dashboard screenshot" loading="lazy"></a>
+                </article>
 
+                <article class="project-card glass-panel">
+                    <div class="card-glow"></div>
+                    <div class="project-content">
+                        <div class="card-header"><div class="card-icon">&#128451;</div><span class="card-badge">SQL</span></div>
+                        <h3>Indian Automobile Enterprise Database</h3>
+                        <p>Normalized enterprise database project with OLAP queries and Python-based sales analysis visuals.</p>
+                        <ul class="project-highlights">
+                            <li>Designed a normalized Oracle SQL database.</li>
+                            <li>Implemented OLAP queries using ROLLUP, RANK, DENSE_RANK and Window Functions.</li>
+                            <li>Built Python visualizations for sales analysis.</li>
+                        </ul>
+                        <div class="tech-stack"><span>Oracle SQL</span><span>OLAP</span><span>Python</span><span>Data Visualization</span></div>
+                        <div class="project-actions"><a href="https://github.com/harsh241005/automobile-enterprise-db" target="_blank" rel="noopener" class="btn primary-btn">GitHub</a></div>
+                    </div>
+                    <a href="https://github.com/harsh241005/automobile-enterprise-db" target="_blank" rel="noopener" class="project-image" aria-label="View Indian Automobile Enterprise Database repository"><img src="images/automobile-db.png" alt="Indian Automobile Enterprise Database visualization screenshot" loading="lazy"></a>
+                </article>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- CONTACT -->
         <section id="contact" class="contact section hidden">
             <div class="section-header">
-                <h2>Get in <span class="gradient-text">Touch</span></h2>
+                <h2>GET IN <span class="gradient-text">TOUCH</span></h2>
             </div>
             <div class="contact-container">
                 <div class="contact-info glass-panel">
                     <h3>Contact Information</h3>
-                    <p>Interested in working together or just want to say hi? Feel free to drop a message!</p>
+                    <p>Interested in working together or just want to say hi? Drop a message below or reach out directly.</p>
                     <ul class="social-links">
-                        <li><strong>Email:</strong> palyekarharsh2410@gmail.com</li>
                         <li><strong>Based in:</strong> Mapusa, Goa</li>
                     </ul>
                 </div>
@@ -154,13 +322,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Harsh Palyekar. All Rights Reserved.</p>
+        <p>&copy; 2026 Harsh Palyekar. Built with data &amp; caffeine.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/3d-bg.js"></script>
-    <script src="js/skills-chart.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

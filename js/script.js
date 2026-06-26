@@ -34,28 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Spotlight Effect for Project Cards
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
-        });
-    });
-
-    // Magnetic Buttons Effect
-    document.querySelectorAll('.btn').forEach(elem => {
-        elem.addEventListener('mousemove', (e) => {
-            const bounding = elem.getBoundingClientRect();
-            const x = e.clientX - bounding.left - bounding.width / 2;
-            const y = e.clientY - bounding.top - bounding.height / 2;
-            elem.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.05)`;
-        });
-        elem.addEventListener('mouseleave', () => {
-            elem.style.transform = `translate(0px, 0px) scale(1)`;
-        });
+    // Apply brand colors to skill pill dots
+    document.querySelectorAll('.pill-dot[data-color]').forEach(dot => {
+        const color = dot.getAttribute('data-color');
+        dot.style.background = color;
+        dot.style.color = color;
     });
 
     // Custom Magnetic Cursor
@@ -63,22 +46,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cursor && window.innerWidth > 768) {
         let mouseX = window.innerWidth / 2;
         let mouseY = window.innerHeight / 2;
-        let cursorX = mouseX;
-        let cursorY = mouseY;
+        let rafId = null;
+
+        const updateCursor = () => {
+            cursor.style.setProperty('--cursor-x', `${mouseX}px`);
+            cursor.style.setProperty('--cursor-y', `${mouseY}px`);
+            rafId = null;
+        };
         
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
+            if (!rafId) rafId = requestAnimationFrame(updateCursor);
         });
 
-        const animateCursor = () => {
-            cursorX += (mouseX - cursorX) * 0.2;
-            cursorY += (mouseY - cursorY) * 0.2;
-            cursor.style.left = `${cursorX}px`;
-            cursor.style.top = `${cursorY}px`;
-            requestAnimationFrame(animateCursor);
-        };
-        animateCursor();
+        updateCursor();
 
         const clickables = document.querySelectorAll('a, button, .project-card, .btn');
         clickables.forEach(el => {

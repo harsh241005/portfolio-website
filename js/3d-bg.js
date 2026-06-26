@@ -9,13 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     camera.position.z = 6;
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false, powerPreference: 'low-power' });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const getPixelRatio = () => Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1 : 1.35);
+    renderer.setPixelRatio(getPixelRatio());
 
     // Data-like particle clouds
     const geometry = new THREE.BufferGeometry();
-    const count = 1500;
+    const count = window.innerWidth < 768 ? 520 : 900;
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
     const sizes = new Float32Array(count);
@@ -109,26 +110,50 @@ document.addEventListener("DOMContentLoaded", () => {
     let mouseY = 0;
     let targetX = 0;
     let targetY = 0;
-    const windowHalfX = window.innerWidth / 2;
-    const windowHalfY = window.innerHeight / 2;
+    let windowHalfX = window.innerWidth / 2;
+    let windowHalfY = window.innerHeight / 2;
+    let mouseRaf = null;
 
-    document.addEventListener('mousemove', (event) => {
+    const updateMouse = (event) => {
         mouseX = (event.clientX - windowHalfX);
         mouseY = (event.clientY - windowHalfY);
+        mouseRaf = null;
+    };
+
+    document.addEventListener('mousemove', (event) => {
+        if (mouseRaf) return;
+        mouseRaf = requestAnimationFrame(() => updateMouse(event));
     });
 
     // Resize handler
-    window.addEventListener('resize', () => {
+    let resizeRaf = null;
+    const resize = () => {
+        windowHalfX = window.innerWidth / 2;
+        windowHalfY = window.innerHeight / 2;
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(getPixelRatio());
+        resizeRaf = null;
+    };
+
+    window.addEventListener('resize', () => {
+        if (!resizeRaf) resizeRaf = requestAnimationFrame(resize);
     });
 
     // Animation loop
     const clock = new THREE.Clock();
+    let animationFrameId = null;
+
+    const shouldRender = () => document.visibilityState === 'visible';
 
     function animate() {
-        requestAnimationFrame(animate);
+        if (!shouldRender()) {
+            animationFrameId = null;
+            return;
+        }
+
+        animationFrameId = requestAnimationFrame(animate);
         
         const elapsedTime = clock.getElapsedTime();
 
@@ -141,15 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         innerWireframe.rotation.y = elapsedTime * 0.06;
         innerWireframe.rotation.z = elapsedTime * -0.04;
-
-        // Make particles slightly undulate
-        const positions = particles.geometry.attributes.position.array;
-        for(let i = 0; i < count; i++) {
-            const i3 = i * 3;
-            // Add slight movement on the y axis based on time and their x pos
-            const x = positions[i3];
-            // We'll leave this out to keep it performant, rely on rotation
-        }
 
         // Mouse Parallax effect
         targetX = mouseX * 0.001;
@@ -164,6 +180,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         renderer.render(scene, camera);
     }
+
+    const startAnimation = () => {
+        if (!animationFrameId && shouldRender()) {
+            clock.start();
+            animate();
+        }
+    };
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            startAnimation();
+        } else if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+            clock.stop();
+        }
+    });
     
-    animate();
+    startAnimation();
 });
